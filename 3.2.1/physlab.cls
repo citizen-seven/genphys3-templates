@@ -6,7 +6,6 @@
 \RequirePackage[T2A, T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english, russian]{babel}
-\RequirePackage{inputx}
 
 % Беспредел
 \let\NOLIMITS\nolimits
@@ -20,7 +19,7 @@
 \RequirePackage{cancel}
 \RequirePackage{mathrsfs}
 \RequirePackage{iunits}
-\usepackage{siunitx}
+\RequirePackage{siunitx}
 
 % Разметка
 \RequirePackage [hcentering,
@@ -39,6 +38,7 @@
 \usepackage{multirow}
 \newcommand\val{~\hspace{15mm}~}
 \newcommand\valt{\hspace{9mm}}
+\renewcommand\arraystretch{1.2}
 
 % Графика
 \RequirePackage{graphicx}

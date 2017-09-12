@@ -2,27 +2,26 @@
 
 \begin{document}
 \include{cover}
-\textbf{Цель работы:} Изучить влияние активного сопротивления, индуктивности и емкости на сдвиг фаз между током и напряжением в цепи переменного тока.
+
+\paragraph{Цель работы:} изучить влияние активного сопротивления, индуктивности и ёмкости на~сдвиг фаз между током и~напряжением в~цепи переменного тока.
 
 \section{Экспериментальная установка}
 
-
-
-\begin {figure}[H]
-\begin{center}
-\includegraphics[width=0.9\tw]{t}
-\end{center}
-\end {figure}
-$$R_L= \val \text{при $\nu = $}$$
-$$L = $$
-$$r = $$
-$$C = $$
-$$\nu = $$
+\begin{figure}[H]\centering
+    \includegraphics[width=0.85\tw]{t}
+\end{figure}
+\vspace{-2ex}
+\begin{align*}
+    R_L &= \val & \text{при}~\nu &= \val \\[1ex]
+    L &= \val \\[1ex]
+    r &= \val \\[1ex]
+    C &= \val \\[1ex]
+    \nu &= \val
+\end{align*}
 
 \subsection*{RC-цепь}
-
-Ток, текущий через RC цепочку, пропорционален напряжению на резисторе, и опережает напряжение на конденсаторе по фазе на $\pi/2$. В таком простом случае метод векторных диаграмм даёт простой результат для зависимости сдвига фаз от $R$:
-$$\tg \varphi = \frac{1}{\Omega R C}$$
+Ток, текущий через RC"=цепочку, пропорционален напряжению на резисторе, и опережает напряжение на конденсаторе по фазе на $\pi/2$. В таком простом случае метод векторных диаграмм даёт простой результат для зависимости сдвига фаз от $R$:
+$$\tg \varphi = \frac{1}{\Omega R C}.$$
 \begin {figure}[H]
 \begin{center}
 \includegraphics[width=0.6\tw]{rcd}
@@ -30,49 +29,43 @@ $$\tg \varphi = \frac{1}{\Omega R C}$$
 \end {figure}
 
 \subsection*{RL-цепь}
-
-Всё аналогично RC цепочке, только импеданс катушки теперь 
-$$Z_2 = j\omega L,$$
-поэтому ток отстаёт по фазе от напряжения, а рассчётная формула приобретает вид
-$$\tg \varphi = \frac{\omega L}{R_{\sum}}$$
-Теперь к сопротивлению калибровочного резистора и резистора $R$ добавится активное сопротивление катушки:
+Рассмотрение этого случая аналогично предыдущему. Импеданс катушки равен $Z_2 = j\omega L$, поэтому ток отстаёт по фазе от напряжения, и расчётная формула приобретает вид
+$$\tg \varphi = \frac{\omega L}{R_{\sum}}.$$
+К сопротивлению калибровочного резистора и резистора $R$ добавится активное сопротивление катушки:
 $$R_{\sum} = R+r+R_L,$$
 где $R_L$ -- активное сопротивление катушки.
 
 \subsection*{RCL-цепь}
 
-Комплексный импеданс RCL-цепочки:
-$$Z=R+j\omega L - \frac{j}{\omega C}.$$
+\vspace{-1.75ex}
+Комплексный импеданс RCL-цепочки $Z=R+j\omega L - \dfrac{j}{\omega C}$.
+\vspace{.75\parskip}
 
 Сдвиг фаз между током и напряжением получим, взяв аргумент $Z$:
-
-$$\tg\varphi = \frac{\omega L - \frac{1}{\omega C}}{R} = Q\frac{\left(\frac{\omega}{\omega_0}\right)^2 - 1}{\frac{\omega}{\omega_0}} = Q\frac{(1+x)^2-1}{1+x} \simeq 2x Q,$$
-где $x = \Delta \omega / \omega_0 = \Delta \nu / \nu_0$, и в последнем переходе пренебрегаем квадратичными по $x$ членами.
-Измерив ширину графика $w=2x$ на высоте $\varphi = \pi / 4\ (\tg\varphi = 1)$, можем непосредственно измерить добротность контура:
-$$Q = \frac{1}{w}$$
+$$\tg\varphi = \frac{\omega L - 1/(\omega C)}{R} = Q\frac{\left(\omega/\omega_0\right)^2 - 1}{\omega/\omega_0} = Q\frac{(1+x)^2-1}{1+x} \simeq 2x Q,$$
+где $x \equiv \Delta \omega / \omega_0 = \Delta \nu / \nu_0$.
+В последнем переходе пренебрегаем степенями~$x$ выше первой.
+Измерив ширину графика $w=2x$ на высоте $\varphi = \pi / 4\ (\tg\varphi = 1)$, можем непосредственно определить добротность контура:
+$$Q = \frac{1}{w}.$$
 
 \subsection*{Фазовращатель}
 
-\begin {figure}[H]
-\begin{center}
-\includegraphics[width=0.8\tw]{phase.png}
-\end{center}
-\end {figure}
+\vspace{-7.5mm}
+\begin{minipage}{.65\tw}
+    \includegraphics[width=\lw]{phase}
+\end{minipage}
+\hfill
+\begin{minipage}{.32\tw}
+    \includegraphics[width=\lw]{diagramphase}
+\end{minipage}\smallskip
 
-
-\begin {figure}[H]
-\begin{center}
-\includegraphics[width=0.7\tw]{diagramphase}
-\end{center}
-\end {figure}
-
-Разность фаз равна $\pi /2$, когда медиана $34$ является и высотой, т.е. когда $\triangle 124$ -- равнобедренный, откуда
+Разность фаз равна $\pi /2$, когда медиана $\overline{34}$ в то же время является и высотой, т.\,е. когда $\triangle 124$ -- равнобедренный, откуда \emph{что?}
 
 \section{Работа и измерения}
 
 \subsection*{RC-цепь}
 
-$$X_1 = \dfrac{1}{2 \pi \nu C} = $$
+$$X_1 = \dfrac{1}{2 \pi \nu C} = \val$$
 
 \begin{table}[H]
 \centering
@@ -91,25 +84,18 @@ $R$ & $x$ & $x_0$ & $\varphi$ & $\tg \varphi$ & $R_{\Sigma}$ & $1/(R_{\Sigma} \O
 \val    &    \val   &   \val    &   \val    &   \val    &   \val    &   \val    \\ \hline
 \val    &    \val   &   \val    &   \val    &   \val    &   \val    &   \val    \\ \hline
 \val    &    \val   &   \val    &   \val    &   \val    &   \val    &   \val    \\ \hline
-\val    &    \val   &   \val    &   \val    &   \val    &   \val    &   \val    \\ \hline
-\val    &    \val   &   \val    &   \val    &   \val    &   \val    &   \val    \\ \hline
 \end{tabular}
 \caption{Полученные значения в RC-цепи}
 \end{table}
 
-Найдем погрешности измерения величин:
-$$\sigma_{\tg \varphi} = 
-0.1\pi \sqrt{\left(\dfrac{1}{x_0 \cos^2\left(\dfrac{\pi x}{x_0}\right)}\right)^2 + \left(\dfrac{x}{x_0^2 \cos^2 \left(\dfrac{\pi x}{x_0}\right)}\right)^2} $$
-
-	\begin {figure}[H]
-		\begin{center}
-			\includegraphics[width=0.7\tw]{foo}
-			\caption{График зависимости $\tg \varphi = f[1/ \Omega C R_{\Sigma}]$}
-		\end{center}
-	\end {figure}
+\begin{figure}[b!]\centering
+	\includegraphics[width=.65\tw]{foo}
+	\caption{График зависимости $\tg \varphi = f[1/ \Omega C R_{\Sigma}]$}
+\end{figure}
+\clearpage
 
 \subsection*{RL-цепь}
-\[X_2 = 2 \pi \nu L = \]
+\[X_2 = 2 \pi \nu L = \val \]
 
 \begin{table}[H]
 \centering
@@ -125,16 +111,17 @@ $R $ & $x$  & $x_0$ & $\varphi$ & $\tg \varphi$ & $R_{\Sigma}$ & $\Omega L/ R_{\
 \val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
 \val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
 \val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
+\val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
+\val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
+\val & \val & \val  & \val      & \val          & \val         & \val                  \\ \hline
 \end{tabular}
 \caption{Полученные значения в RL-цепи}
 \end{table}
 
-\begin {figure}[H]
-	\begin{center}
-		\includegraphics[width=0.8\tw]{foo}
-		\caption{График зависимости $\tg \varphi = f[\Omega L / R_{\Sigma}]$}
-	\end{center}
-\end {figure}
+\begin{figure}[b!]\centering
+	\includegraphics[width=.65\tw]{foo}
+	\caption{График зависимости $\tg \varphi = f[\Omega L / R_{\Sigma}]$}
+\end{figure}
 
 \subsection*{RCL-цепь}
 
@@ -142,10 +129,8 @@ $R $ & $x$  & $x_0$ & $\varphi$ & $\tg \varphi$ & $R_{\Sigma}$ & $\Omega L/ R_{\
 \centering
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-Сопротивление & $\nu, \text{кГц}$ & $x_0$ & $x$ & $\varphi$ & $nu\nu_0$ \\ \hline
-\multirow{11}{*}{$R = 0 \text{ Ом}$}     & \val            & \val   & \val & \val   & \val      \\ \cline{2-6} 
-                                         & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
-                                         & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
+Сопротивление & $\nu, \text{кГц}$ & $x_0$ & $x$ & $\varphi$ & $\nu/\nu_0$ \\ \hline
+\multirow{10}{*}{$R = 0 \text{ Ом}$}     & \val            & \val   & \val & \val   & \val      \\ \cline{2-6} 
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
@@ -155,9 +140,7 @@ $R $ & $x$  & $x_0$ & $\varphi$ & $\tg \varphi$ & $R_{\Sigma}$ & $\Omega L/ R_{\
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \hline
-\multirow{13}{*}{$R = 100 \text{ Ом}$}   & \val            & \val   & \val & \val   & \val      \\ \cline{2-6} 
-                                         & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
-                                         & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
+\multirow{12}{*}{$R = 100 \text{ Ом}$}   & \val            & \val   & \val & \val   & \val      \\ \cline{2-6} 
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
                                          & \val            & \val   & \val & \val   & \val      \\ \cline{2-6}
@@ -171,39 +154,46 @@ $R $ & $x$  & $x_0$ & $\varphi$ & $\tg \varphi$ & $R_{\Sigma}$ & $\Omega L/ R_{\
 \caption{Полученные значения при изучении зависимости фазы от $\dfrac{\nu}{\nu_0}$}
 \end{table}
 
-\[C = \val, \; L = \val, \; \nu_0 = \val\]
+\vspace{-1cm}
+\begin{align*}
+    C &= \val \\[1ex]
+    L &= \val \\[1ex]
+    \nu_0 &= \val    
+\end{align*}
 
-\begin {figure}[H]
+% dirty hack, i'm too lazy
+Из графика $R = 0$ Ом\hfill добротность $Q_{0}= $\hspace{8.29cm}~
+
+\vspace{-\parskip}
+Из графика $R = 100$ Ом \hfill добротность $Q_{100}= $\hspace{8cm}~
+
+Можно рассчитать добротность, выразив её через параметры цепочки:
+$Q = \dfrac{1}{R} \sqrt{\dfrac{L}{C}}$.
+\begin{align*}
+    Q_{\text{теор, 0}} &= \val \\[1ex]
+    Q_{\text{теор, 100}} &= \val 
+\end{align*}
+
+\begin {figure}[p]
 	\begin{center}
-		\includegraphics[width=0.7\tw]{foo}
-		\caption{График зависимости $\varphi = f[\nu/\nu_0] \text{ для $R = 0$ Ом}$}
+		\includegraphics[width=0.75\tw]{foo}
+		\caption{График зависимости $\varphi = f[\nu/\nu_0] \text{ при $R = 0$ Ом}$}
 	\end{center}
 \end {figure}
 
-\begin {figure}[H]
+\begin {figure}[p]
 	\begin{center}
-		\includegraphics[width=0.7\tw]{foo}
-		\caption{График зависимости $\varphi = f[\nu/\nu_0] \text{ для $R = 100$ Ом}$}
+		\includegraphics[width=0.75\tw]{foo}
+		\caption{График зависимости $\varphi = f[\nu/\nu_0] \text{ при $R = 100$ Ом}$}
 	\end{center}
 \end {figure}
+\clearpage
 
-Из графика $R = 0$ Ом добротность равна:
-$$Q_{0}= $$
-
-Из графика $R = 100$ Ом добротность равна:
-$$Q_{100}=$$
-
-Можно рассчитать её, выразив через параметры цепочки:
-$$Q = \frac{1}{R} \sqrt{\frac{L}{C}}$$
-$$Q_{\text{теор, 0}} = \val$$
-$$Q_{\text{теор, 100}} = \val$$
 
 \section{Вывод}
 
-На данной лабораторной работе была изучена зависимость сдвига фаз между током и напряжением от сопротивления в цепи в RC, RL, контурах. Была определена добротность колебательного контура, снята зависимость сдвига фаз от частоты вблизи резонанса. 
+В настоящей лабораторной работе была изучена зависимость сдвига фаз между током и~напряжением от сопротивления в цепи в RC- и RL-цепях. Была определена добротность колебательного контура, снята зависимость сдвига фаз от частоты вблизи резонанса.
 
-Для RC контура практический график довольно точно совпадает с теоретическим, однако в RL контуре значения отличаются на 20\%. Ошибка связана с неправильной установкой частоты (10 кГц вместо 1 кГц), вследствие чего изменилось и реактивное сопротивление цепи. Точнее говоря, оно стало настолько большим, что диапазон изменения $\tg \varphi$ повысился и сильно увеличилась погрешность измерения.
-
-После изменения частоты на 1 кГц при измерении добротности колебательного контура получились достаточно точные значения, теоретические и практические совпали с учетом погрешности.
+~\\[-1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule~\\[1ex]\hrule
 
 \end{document}
