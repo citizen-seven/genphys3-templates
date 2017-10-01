@@ -7,13 +7,12 @@
 \begin{document}
 	\include{cover}
 
-\section{Цель работы}
-Измерение подвижности и концентрации носителей заряда в полупроводниках.
+\textbf{Цель работы:} Измерение подвижности и концентрации носителей заряда в полупроводниках.
 
-В работе используются: \textit{электромагнит с источником питания, амперметр, миллиамперметр, милливеберметр, реостат, цифровой вольтметр, источник питания, образцы легированного германия.}
+\textbf{В работе используются:} \textit{электромагнит с источником питания, амперметр, миллиамперметр, милливеберметр, реостат, цифровой вольтметр, источник питания, образцы легированного германия.}
 
 
-\subsection*{Теоретическая часть}
+\section{Теоретическая часть}
 
 \paragraph{Дырки}
 
@@ -29,7 +28,7 @@
 
 \begin {figure}[H]
 	\begin{center}
-		\includegraphics[width = 0.35 \textwidth]{Hall_effect}
+		\includegraphics[width = 0.35 \textwidth]{hall_effect}
 		\caption{Пример действия эффекта Холла на свободные заряды}
 	\end{center}
 \end {figure}
@@ -50,20 +49,21 @@ U = -E_zl = - | \langle \upsilon \rangle | B l
 
 Далее, если выразить ток:
 $$ I = ne |\langle \upsilon \rangle |  l a$$
-И совместить его с \ref{eq:pot_dif}, получим ЭДС Холла:
+И совместить его с (\ref{eq:pot_dif}), получим ЭДС Холла:
 
 \begin{equation}
 \mathscr{E}_x = U = - \dfrac{IB}{nea} = -R_x \cdot \dfrac{IB}{a},
-\label{eq: Hall}
+\label{eq:hall}
 \end{equation}
 
 где $R_x = \dfrac{1}{ne}$ называется \textit{постоянной Холла.}
 
-\subsection*{Установка и параметры измерения}
+\section{Установка и параметры измерения}
 
-\begin{wrapfigure}[8]{l}{0.7 \textwidth}
-\includegraphics[width = 0.7 \textwidth]{Scheme1.png}
-			\caption{Схема установки для измерения эффекта Холла в полупроводниках}
+\begin{wrapfigure}[8]{L}{0.7 \textwidth}
+\centering
+    \includegraphics[width = 0.7 \textwidth]{scheme.png}
+\caption{Схема установки для измерения эффекта Холла в полупроводниках}
 \end{wrapfigure} 
 
 $$\text{Параметры установки:}$$
@@ -80,24 +80,28 @@ l &= \val
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width = 0.6 \textwidth]{Hall_dif}
+		\includegraphics[width = 0.6 \textwidth]{hall_dif}
 		\caption{Эффект Холла при различных направлениях магнитного поля и тока через образец}
 	\end{center}
 \end{figure}
 
-\section{Работа и измерения}
+
+\section{Обработка результатов}
 
 \paragraph{Калибровка установки}
-Во время проведения работы, мы сняли зависимость магнитного потока $\varPhi$ от силы тока $I$, так же нам известно, что $\varPhi=BSN$, где $SN=75\text{ см}^2\cdot\text{вит}$.
+Во время проведения работы мы сняли зависимость магнитного потока $\varPhi$ от силы тока $I$, так же нам известно, что $\varPhi=BSN$, где $SN=75\text{ см}^2\cdot\text{вит}$.
+
 \begin{table}[H]
 \centering
 \caption{Данные для калибровки установки}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline
-$I, \text{ мА}$ & \val    & \val   & \val & \val   & \val   & \val & \val     & \val   \\ \hline
-$\varPhi, \text{ мВб}$ & \val & \val & \val & \val & \val & \val & \val & \val  \\ \hline
-$B, \text{ Тл}$ & \val & \val & \val &\val & \val & \val& \val & \val \\ \hline
+$I, \; \m \A$ & \val    & \val   & \val & \val   & \val   & \val & \val     & \val   \\ \hline
+$\varPhi, \; \m \Wb$ & \val & \val & \val & \val & \val & \val & \val & \val  \\ \hline
+$B, \; \T$ & \val & \val & \val &\val & \val & \val& \val & \val \\ \hline
 \end{tabular}
+}
 \label{calibrate}
 \end{table}
 
@@ -110,8 +114,8 @@ $B, \text{ Тл}$ & \val & \val & \val &\val & \val & \val& \val & \val \\ \hlin
 
 \begin{table}[H]
 	\centering
-	\label{my-label1}
 	\caption{Зависимость ЭДС Холла от магнитного поля}
+	\resizebox{\linewidth}{!}{
 	\begin{tabu}to 1.05\textwidth{|c|c|c|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|X[c]|}
 		\hline
 		\multirow{2}{*}{$I, \text{ мА}$} & \multirow{2}{*}{$U_0, \text{ мВ}$} & $I_M, \text{ мА}$                                                      &     &    &     &     &     &   &     &     \\ \cline{3-11}
@@ -135,12 +139,15 @@ $B, \text{ Тл}$ & \val & \val & \val &\val & \val & \val& \val & \val \\ \hlin
 		\multirow{2}{*}{}             & \multirow{2}{*}{}              & $U, \text{мВ}$                                                         &   &  & &  &  & & &  \\ \cline{3-11} 
 		&                                    & \begin{tabular}[c]{@{}c@{}}$\mathscr{E}_x,$  $ \text{мВ}$\end{tabular} & &  & &  &  &  &  & \\ \hline	
 	\end{tabu}
+}
 \end{table}
-Опять же проанализируем полученные данные с помощью МНК. Отобразим их в таблице \ref{my-label}.
+
+Проанализируем полученные данные с помощью МНК. Отобразим их в таблице~\ref{tbl:I(k)}:
+
 \begin{table}[H]
 	\centering
 	\caption{Зависимость углового коэффициента от силы тока}
-	\label{my-label}
+	\label{tbl:I(k)}
 	\begin{tabu}{|c|X[c]|X[c] |X[c]| X[c]| X[c]| X[c]| X[c]| X[c]|}
 		\hline
 		$I, \text{ мА}$                                           & \val    &    &     &    &     &     &    &    \\ \hline
@@ -149,26 +156,29 @@ $B, \text{ Тл}$ & \val & \val & \val &\val & \val & \val& \val & \val \\ \hlin
 		$\sigma_I, \text{ мА}$                                 & \multicolumn{8}{c|}{\val}                                             \\\hline
 	\end{tabu}
 \end{table}
-Также изобразим эти данные на графике (Рис. 6). Опять же с помощью МНК получаем, что $$K = \val$$
-Из формулы (2) посчитаем постоянную Холла:
-$$R_x = \val$$
-	\begin {figure}[H]
-		\begin{center}
-			\includegraphics[width = 0.65 \textwidth]{foo}
-			\caption{график зависимости $\mathscr{E}_x = f(B)$ для разных $I$}
-		\end{center}
-	\end {figure}
-~
-		\begin {figure}[b!]
-	\begin{center}
-		\includegraphics[width = 0.65 \textwidth]{foo}
-		\caption{График зависимости углового коэффициента от силы тока}
-	\end{center}
-	\end {figure}
+Также изобразим эти данные на графике (рис. \ref{img:k(I)}). Опять же с помощью МНК получаем, что
+\[K = \val\]
+
+Из формулы (\ref{eq:hall}) посчитаем постоянную Холла:
+\[ R_x = \val \]
+
+\begin {figure}[H]
+\centering
+	\includegraphics[width = 0.65 \textwidth]{foo}
+\caption{График зависимости $\mathscr{E}_x = f(B)$ для разных $I$}
+\end {figure}
+	
+\begin {figure}[H]
+\centering
+    \includegraphics[width = 0.65 \textwidth]{foo}
+\caption{График зависимости углового коэффициента от силы тока}
+\label{img:k(I)}
+\end {figure}
 
 Определим концентрацию носителей заряда: $n = \val$
 	
-Вычислим удельную проводимость материала с помощью $U_{35}=\val$ : $$\sigma=\val$$
+Вычислим удельную проводимость материала с помощью $U_{35}=\val$:
+\[\sigma=\val\]
 
 Рассчитаем подвижность электрона:
 \begin{align*}
